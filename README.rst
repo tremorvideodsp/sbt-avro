@@ -25,7 +25,7 @@ For instance, add the following lines to the file ``project/plugins.sbt`` in you
 project directory::
 
     addSbtPlugin("com.cavorite" % "sbt-avro" % "0.3.2")
- 
+
 
 Scope
 =====
@@ -48,9 +48,9 @@ stringType          ``string-type``          ``CharSequence``                   
 Example
 -------
 
-For example, if you want to change the Java type of the string elements in 
+For example, if you want to change the Java type of the string elements in
 the schema, you can add the following lines to your ``build.sbt`` file::
-    
+
     (stringType in avroConfig) := "String"
 
 
@@ -72,8 +72,8 @@ more details.
 Credits
 =======
 
-`sbt-avro` is maintained by the `sbt Community`_. The inial code was based on a 
-similar plugin: `sbt-protobuf`_. Feel free to send your comments and bug 
+`sbt-avro` is maintained by the `sbt Community`_. The inial code was based on a
+similar plugin: `sbt-protobuf`_. Feel free to send your comments and bug
 reports.
 
 Contributors
@@ -96,3 +96,6 @@ Contributors
 .. _`Ashwanth Kumar`: https://github.com/ashwanthkumar
 .. _`Jérôme - Ch4mpy - Wacongne`: https://github.com/ch4mpy
 .. _`Ben McCann`: http://www.benmccann.com
+.. _`Ryan Koval`: https://github.com/rkoval
+.. _`Saket`: https://github.com/skate056
+.. _`Julian Peeters`: https://github.com/julianpeeters
