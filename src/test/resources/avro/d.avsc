@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "namespace": "com.cavorite",
+    "name": "D",
+    "fields": [{
+            "name": "e",
+            "type": "E"
+        }
+    ]
+}

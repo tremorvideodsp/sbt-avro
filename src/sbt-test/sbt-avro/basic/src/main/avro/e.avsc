@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "namespace": "com.cavorite",
+    "name": "E",
+    "fields": [{
+            "name": "bool",
+            "type": "boolean"
+        }
+    ]
+}

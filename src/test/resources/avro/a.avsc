@@ -8,6 +8,12 @@
         },{
             "name": "c",
             "type": "com.cavorite.C"
+        },{
+            "name": "d",
+            "type": "D"
+        },{
+            "name": "e",
+            "type": "E"
         }
     ]
 }

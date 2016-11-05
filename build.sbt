@@ -10,6 +10,7 @@ scalaVersion := appConfiguration.value.provider.scalaProvider.version
 scalacOptions in Compile ++= Seq("-deprecation")
 
 libraryDependencies ++= Seq(
+  "io.spray" %%  "spray-json" % "1.3.2",
   "org.apache.avro" % "avro" % "1.7.7",
   "org.apache.avro" % "avro-compiler" % "1.7.7",
   "org.specs2" %% "specs2-core" % "3.6.4" % "test"

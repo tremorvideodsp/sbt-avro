@@ -1,5 +1,7 @@
 package sbtavro
 
+import filesorter.AVSCFileSorter
+
 import java.io.File
 import scala.collection.mutable
 import scala.io.Source
@@ -76,7 +78,7 @@ object SbtAvro extends AutoPlugin {
       compiler.compileToDestination(null, target)
     }
 
-    for (schemaFile <- sortSchemaFiles((srcDir ** "*.avsc").get)) {
+    for (schemaFile <- AVSCFileSorter.sortSchemaFiles((srcDir ** "*.avsc").get)) {
       log.info("Compiling Avro schema %s".format(schemaFile))
       val schemaAvr = schemaParser.parse(schemaFile)
       val compiler = new SpecificCompiler(schemaAvr)
@@ -106,7 +108,7 @@ object SbtAvro extends AutoPlugin {
           }
         cachedCompile((srcDir ** "*.av*").get.toSet).toSeq
     }
-
+/*
   def sortSchemaFiles(files: Traversable[File]): Seq[File] = {
     val reversed = mutable.MutableList.empty[File]
     var used: Traversable[File] = files
@@ -155,5 +157,5 @@ object SbtAvro extends AutoPlugin {
 
   val namespaceRegex = "\\\"namespace\\\"\\s*:\\s*\"([^\\\"]+)\\\"".r
   val nameRegex = "\\\"name\\\"\\s*:\\s*\"([^\\\"]+)\\\"".r
-
+*/
 }
