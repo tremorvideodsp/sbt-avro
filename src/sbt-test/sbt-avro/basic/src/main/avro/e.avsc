@@ -1,10 +1,6 @@
 {
-    "type": "record",
-    "namespace": "com.cavorite",
-    "name": "E",
-    "fields": [{
-            "name": "bool",
-            "type": "boolean"
-        }
-    ]
+  "type": "enum",
+  "doc": "Fully-qualified dependency",
+  "name": "com.cavorite.E",
+  "symbols" : ["A", "AA", "AAA"]
 }

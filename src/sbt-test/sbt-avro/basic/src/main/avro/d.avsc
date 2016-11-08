@@ -1,10 +1,10 @@
 {
     "type": "record",
-    "namespace": "com.cavorite",
-    "name": "D",
+    "name": "com.cavorite.D",
+    "doc": "Fully-qualified dependency",
     "fields": [{
-            "name": "e",
-            "type": "E"
+            "name": "c",
+            "type": "com.cavorite.C"
         }
     ]
 }
