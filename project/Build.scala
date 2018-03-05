@@ -33,7 +33,7 @@ object build extends Build {
                 Some(Resolver.url(name, new URL(url)))
             },
 
-            publishMavenStyle := false
+            publishMavenStyle := true
         )
     )
 }
