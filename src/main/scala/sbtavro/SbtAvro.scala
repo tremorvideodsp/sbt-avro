@@ -69,6 +69,8 @@ object SbtAvro extends Plugin {
     libraryDependencies <+= (version in avroConfig)("org.apache.avro" % "avro-compiler" % _),
     ivyConfigurations += avroConfig)
 
+  def normalizeInput(files: Seq[File]) = files.sortBy(file => file.getName)
+
   private def compile(srcDir: File, target: File, log: Logger, stringTypeName: String) = {
     val stringType = StringType.valueOf(stringTypeName);
     log.info("Avro compiler using stringType=%s".format(stringType));
@@ -84,7 +86,7 @@ object SbtAvro extends Plugin {
       compiler.compileToDestination(null, target)
     }
 
-    for (schema <- (srcDir ** "*.avsc").get) {
+    for (schema <- normalizeInput((srcDir ** "*.avsc").get)) {
       log.info("Compiling Avro schema %s".format(schema))
       val schemaAvr = schemaParser.parse(schema.asFile)
       val compiler = new SpecificCompiler(schemaAvr)
